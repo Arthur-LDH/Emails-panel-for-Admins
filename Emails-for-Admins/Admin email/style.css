@@ -1,0 +1,583 @@
+/*---GENERAL---*/
+@font-face {
+    font-family: "Helvetica";
+    src: url("./fonts/Helvetica-Font/Helvetica.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Helvetica-bold";
+    src: url("./fonts/Helvetica-Font/Helvetica-Bold.ttf") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    margin: 0 5%;
+    margin-bottom: 50px;
+    overflow-x: hidden;
+}
+
+p{
+    margin: 0;
+    font-family: "Helvetica", sans-serif;
+    font-size: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.no-select{
+    user-select:none;
+}
+
+h2, .title p{
+    font-family: "Helvetica-bold", sans-serif;
+    font-size: 16px;
+    color: #666666;
+}
+
+.resultnb{
+    font-size: 25px;
+}
+
+.boldTxt{
+    font-weight: bold;
+    color: black !important;
+}
+
+.hide{
+    display: none;
+}
+
+
+/*---DATE SEARCH---*/
+.search{
+    margin-top: 3%;
+    width: 100%;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+}
+
+.search-sides{
+    padding: 13px 20px;
+    border: 2px solid #E1E1E1;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.search-left{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 65px;
+}
+
+.search-calendar{
+    height: 25px;
+    padding-right: 10px;
+}
+
+.search-middle-dates{
+    border: 2px solid #E1E1E1;
+    border-left: none;
+    border-right: none;
+    padding: 12px 16px 10px 0px;
+    width: 250px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Helvetica", sans-serif;
+}
+
+.search-right{
+    background-color: #F5F5F5;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.search-right-logo{
+    height: 25px;
+}
+
+
+.result{
+    margin-top: 2%;
+}
+
+.result h2{
+    font-size: 18px;
+}
+
+
+/*---NO-MAIL---*/
+.no-mail{
+    min-height: 70vh;
+    background-image: url(assets/logo.png);
+    background-size: 170px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/*---SEARCH-RESULT---*/
+.search-result{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+}
+
+/*---DESKTOP-DISPLAY---*/
+
+.desktop{
+    width: 100%;
+}
+
+.desktop-title, .desktop-mail{
+    display: flex;
+    flex-wrap: nowrap;
+    float: left;
+    width: 100%;
+    height: 55px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.desktop-title{
+    border-top: 2px solid #E1E1E1;
+    border-bottom: 2px solid #E1E1E1;
+    background-color: #F5F5F5;
+}
+
+.desktop-mail div,.desktop-title div{
+    padding: 15px 0 15px 25px;
+}
+
+.desktop-title div{
+    height: 100%;
+    
+}
+
+.desktop-mail{
+    border-bottom: 2px solid #E1E1E1;
+}
+
+.mail:hover, .small-mail:hover{
+    color: blue;
+    background-color: #F5F5F5;
+    cursor: pointer;
+}
+
+.mail-focus{
+    color: blue;
+    background-color: #F5F5F5;
+}
+
+.desktop .from{
+    width: 15.5%;
+}
+
+.desktop .to{
+    width: 20%;
+    display: flex;
+}
+
+.desktop-title .to{
+    width: 25%;
+}
+
+.desktop .addTo{
+    width: 5%;
+}
+
+.addTo p{
+    background-color: grey;
+    color: #fff;
+    width: fit-content;
+    border-radius: 4px;
+    line-height: 22px;
+    padding: 0 5px;
+    margin-top: 5px;
+    font-size: 16px;
+    margin-left:10%;
+    text-overflow: initial;
+    white-space: nowrap;
+}
+
+.desktop .subject{
+    width: 45.5%;
+}
+
+.desktop-title .subject{
+    width: 47.5%;
+}
+
+.desktop .clip{
+    width: 2%;
+}
+
+.desktop .clip-img{
+    height: 20px;
+    margin-top:-5px;
+}
+
+.desktop .date{
+    width: 5%;
+    padding-right: 0;
+}
+
+.desktop .date p{
+    overflow: visible;
+    text-overflow: initial;
+}
+
+.arrow{
+    height: 7px;
+}
+
+.arrow-down{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+/*---SMALL-DISPLAY---*/
+.small, .small-title, .small-title > div{
+    display: flex;
+}
+
+.small{
+    width: 100%;
+    flex-direction: column;
+}
+
+.small-title{
+    border-top: 2px solid #E1E1E1;
+    border-bottom: 2px solid #E1E1E1;
+    background-color: #F5F5F5;
+    padding: 15px 25px 15px;
+    height: 54px;
+    align-items: center;
+}
+
+.small-title .sort{
+    cursor: pointer;
+}
+
+span .title-spacing{
+    padding: 0 5px;
+    font-family: sans-serif;
+}
+
+.small-mail{
+    padding: 15px 25px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #E1E1E1;
+}
+
+.mail-icon{
+    margin: 8px 8px 0 0;
+    height: auto;
+    width: 15px;
+}
+
+.firstBox{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.small-mail .from {
+    display: flex;
+    max-width: 75%;
+    width: auto;
+}
+
+.dateClipBox{
+    display: flex;
+    justify-content: space-between;
+    min-width: 20%;
+    width: fit-content;
+}
+
+.small-mail .clip{
+    width: 30px;
+    text-align: center;
+}
+
+.small-mail .clip-img{
+    height: 18px;
+}
+
+.small-mail .date{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.small-mail .date > img{
+    height: 8px;
+    margin: 8px 0 0 7px;
+}
+
+.small-mail .toAddToBox{
+    padding-left: 23px;
+    margin-top: -16px;
+}
+
+.small-mail .to{
+    max-width: 88%;
+}
+
+.small-mail .addTo{
+    width: 12%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.small-mail .subject{
+    width: 100%;
+}
+
+/*---BODY-MAIL---*/
+#body-mail{
+    display: none;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    height: 100vh;
+    right: -100%;
+    background-color: #fff;
+    border-left: 2px solid #E1E1E1;
+    box-shadow: -2px 0px 4px rgba(0, 0, 0, 0.247);
+}
+
+#body-mail p{
+    white-space: initial;
+}
+
+.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.body-menu{
+    min-height: 52.5px;
+    border-bottom: 2px solid #E1E1E1;
+    background-color: #F5F5F5;
+    box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.247);
+}
+
+.fas{
+    cursor: pointer;
+    margin: 11px 0 0 15px;
+    color: #666666;
+}
+
+.switch{
+    float: left;
+    font-size: 28px;
+}
+
+.change-body{
+    float: right;
+    display: flex;
+    margin-top: 6px;
+}
+
+.change-body p{
+    font-size: 18px;
+}
+
+.change-body a{
+    font-size: 15px;
+}
+
+.change-body > p > a:first-child{
+    margin-right: 5px;
+}
+.change-body > p > a:last-child{
+    margin-left: -4px;
+}
+
+.disable{
+    cursor: default;
+    color: lightgrey;
+}
+
+.body-content{
+    padding: 0 5% 5%;
+}
+
+.body-subject p{
+    font-weight: bold;
+    font-size: 25px;
+    margin: 10px 0 25px; 
+}
+
+.body-from, .body-to{
+    display: flex;
+}
+
+.body-from h4, .body-to h4{
+    font-size: 16px;
+    margin-right: 5px;
+    color: #666666;
+}
+
+.body-from p, .body-to p, .body-date p{
+    font-size: 16px;
+    margin-top: -1px;
+    padding: 0;
+}
+
+.body-date p{
+    color: #666666;
+}
+
+.body-clip p{
+    color: blue;
+    cursor: pointer;
+    width: fit-content;
+}
+
+
+
+@media screen and (min-width: 769px) {
+    .small{
+        width: 40%;
+        display: none;
+    }
+
+    .small-mail .addTo{
+        max-height: 25px;
+    }
+
+    .small-mail .clip{
+        margin-top: 4px;
+        width: 30px;
+        margin-left: -8px;
+        margin-right: 8px;
+    }
+
+    .small-mail .date > img{
+        margin-top: 12px;
+    }
+
+    #body-mail{
+        width: calc(60% + 20px);
+        margin-right: -20px;
+    }
+
+    .change-body{
+        margin-right: 30px;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    
+    .desktop{
+        display: none;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    .search{
+        margin-bottom: 25px;
+    }
+
+    .result, .search{
+        padding-left: 25px;
+    }
+
+    .search-middle-dates{
+        width: 50%;
+        font-size: 16px;
+    }
+    
+    .small-mail p{
+        font-size: 18px;
+    }
+
+    .addTo p{
+        font-size: 16px;
+    }
+
+    .small-mail .date p{
+        font-size: 17px;
+    }
+    
+    .small-mail .subject p{
+        font-size: 20px;
+        margin-top: 8px;
+        margin-bottom: -7px;
+    }
+
+    #body-mail{
+        width: 100vw;
+    }
+
+    .change-body{
+        margin-right: 15px;
+    }
+}
+
+
+
+@media only screen and (max-width: 545px){
+    .search-middle-dates{
+        width: 50%;
+        font-size: 12px;
+    }
+
+    .small-mail p{
+        font-size: 17px;
+    }
+
+    .addTo p{
+        font-size: 16px;
+    }
+
+    .small-mail .date p{
+        font-size: 16px;
+    }
+    
+    .small-mail .subject p{
+        font-size: 18px;
+    }
+}
+
+
+
+@media only screen and (max-width: 380px){
+    .small-mail .from{
+        max-width: 75%;
+        width: auto;
+    }
+
+    .small-mail .dateClipBox{
+        min-width: 20%;
+        width: fit-content;
+    }
+}
+
+
+
+@media only screen and (max-width: 350px){
+    .small-mail .from{
+        max-width: 65%;
+        width: auto;
+    }
+
+    .small-mail .dateClipBox{
+        min-width: 35%;
+        width: fit-content;
+    }
+}
